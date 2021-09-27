@@ -1,0 +1,166 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+
+.contenedor{
+	width: 80%;
+	height: 500px; /*se comentaria la altura para que sea dimanica y trabajar con los hijos*/
+	background: #FF5C29;
+	margin: 50px auto;
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+	/*align-content: space-around;
+
+	
+
+	/*display: flex; posiciona los elementos uno al lado del otro*/
+	/*se pueden mover la cajas anteriones con los siguientes comandos*/
+	
+	/*flex-direction: row;*/
+	/*empieza del lado izquierdo y lo posiciona en la parte de arriba*/
+	
+	/*flex-direction: row-reverse;*/
+	/*empieza del lado derecho y comienza de derecha a izquierda con nuestros primer contenedor*/
+
+	/*flex-direction: column;
+	/*nos muestra los elementos en forma de columna, hacia abajo, fundamental para el diseño responsivo*/
+
+	/*flex-direction: column;*/
+	/*nos muestra los elementos en forma de columna pero el orden es de abajo hacia arriba*/
+
+
+	/*flex-direction: row;
+    flex-wrap: ; nowrap = esta funcion se coloca por defecto */
+    /*para ver su efecto se deben colocar muchoos hijos; coloca todas la division en una sola fila ajustando el tamaño*/
+
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    /*Coloca las divisiones respetando el tamaño colocado y si no caben el la division por que exiten muchas crea una nueva linea abajo*/
+    
+    /*flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;*/
+    /*Coloca los elementos al inicio, arriba a la izquierda*/
+
+    /*flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    Coloca los elementos en la parte derecha no los invierte*/
+
+    /*flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    Coloca los elementos en el centro de la division sin en su orden normal*/
+
+    /*flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    Esta generando un espacio entre los contenedores hijos pero sin dejar espacio en las esquinas */
+
+    /*flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    Genera un espacio al inicio, en el lado derecho y izquierdo del elemento del centro, y un espacio al lado izquierdo del ultimo elemento*/
+
+    /*flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end; una linea
+    posiciona todos los elementos hijos en la parte de abajo de la pantalla*/
+
+    /*flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    posiciona los elementos en la parte superior*/
+
+    /*flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    posiciona los elementos en el centro*/
+
+    /*flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    stretch funciona cuando se le quita la propiedad altura (height) permitiendo ocupar el 100% del espacio*/
+
+    /*flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    alinea los hijos guiandose de la letra, los coloca en una fila a lineados*/
+
+    /*flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start; 2 lineas // coloca las 2 lineas en la parte de arriba*/
+	
+    /*flex-direction: row;
+    flex-wrap: wrap;
+	align-content:flex-end; coloca las 2 lineas en la parte de abajo*/
+
+	/*flex-direction: row;
+    flex-wrap: wrap;
+	align-content: center;coloca las 2 lineas en la parte del centro*/
+
+	/*flex-direction: row;
+    flex-wrap: wrap;
+	align-content: space-around;2 lineas
+	crea un espacio en la parte de arriba, abajo y el centro*/
+
+	/*flex-direction: row;
+    flex-wrap: wrap;
+	align-content: space-between;
+	crea un espacio en el centro*/
+}
+
+
+.hijo{
+	/*
+	background: #00B285;
+	width: 200px; /*Con flex-grow el ancho nos sirve para saber cuantas cajas van a caver por lineas*/
+	/*height: 100px;
+	color: #FFF;
+	margin: 30px;
+	padding: 20px;
+	font-size: 40px;
+	text-align: center; 
+	/*flex-grow: 1;*/
+	/*los hijos tienen una anchura de 200px,  si no alcanza a estar bajan automaticamente [si le se coloca 1] se acomoda abajo al 100%*/
+	/*flex-shrink: 0; *//*en modo celular deja el ancho que se asigno*/
+	/*flex: 1 1 auto; /*(SOLO)este abarca las 2 anteriores, esa es la mejor conviancion 1 1 auto, se ajusta muy bien*/
+	
+
+
+	background: #00B285;
+	width: 200px; /*Con flex-grow el ancho nos sirve para saber cuantas cajas van a caver por lineas*/
+	height: 100px;
+	color: #FFF;
+	margin: 30px;
+	padding: 20px;
+	font-size: 40px;
+	text-align: center; 
+	/*flex-grow: 1;*/
+	/*los hijos tienen una anchura de 200px,  si no alcanza a estar bajan automaticamente [si le se coloca 1] se acomoda abajo al 100%*/
+	/*flex-shrink: 0; *//*en modo celular deja el ancho que se asigno*/
+	flex: 1 1 auto; /*(SOLO)este abarca las 2 anteriores, esa es la mejor conviancion 1 1 auto, se ajusta muy bien*/
+	/*order: 1; /* existe 2 y 1 con 1 colocamos de primero se le da prioridad; con 2 siguen manteniendo el mismo orden
+*/
+}
+
+.otro{
+/*Bueno aca se acomoda el tamaño de altura de 500px del padre para que se pueda ver y se quita el 	align-content: space-between;*/
+	align-self: stretch;
+	/* en start se acomoda hacia arriba, general mente se hace con uno solo, y align-self: flex-end queda hacia abajo, y align-self: flex-center queda en el centro;
+
+	/*si se le coloca aling-self:  stretch ocupa el 100% de la pantalla (se le coloco un heifht:  auto para hacer el ejercicio);*/
+	heifht:  auto;
+
+}
+	
